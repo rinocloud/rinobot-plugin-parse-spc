@@ -1,0 +1,21 @@
+Baseline Fraction: 0.05
+Boxcar width: 0
+CRI TCS Index: 1
+Center Wavelength: 580.0
+Dynamic Range: 750.0
+Enabled: 'false'
+Gaussian Width: 50.0
+Integration Time (sec): 0.1
+Intensity: 1.0
+Number of Pixels in Spectrum: 2048
+Resolution (bits): 16
+Sampled maximum: 0.95
+Sampled minimum: 0.0
+Scans to average: 1
+Shutter: 'true'
+Spectrometer: Spectrometer
+Temperature (K): 3100.0
+exp_type: General SPC
+xlabel: Nanometers (nm)
+ylabel: Counts
+zlabel: Arbitrary

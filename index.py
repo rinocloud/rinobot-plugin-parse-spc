@@ -36,10 +36,9 @@ def main(filepath):
                 y = y.strip()
             metadata[x.strip()] = y
 
-    print (metadata)
     f.write_file(filename_without_ext + '.txt', delimiter=delim)
     with open(sys.argv[1] + '.yaml', 'w') as outfile:
-        outfile.write(yaml.dump(metadata, default_flow_style=False))
+        outfile.write(yaml.safe_dump(metadata, default_flow_style=False))
 
 if __name__ == "__main__":
     main(sys.argv[1])
