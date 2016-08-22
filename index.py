@@ -37,8 +37,14 @@ def main(filepath):
             metadata[x.strip()] = y
 
     f.write_file(filename_without_ext + '.txt', delimiter=delim)
-    with open(sys.argv[1] + '.yaml', 'w') as outfile:
-        outfile.write(yaml.safe_dump(metadata, default_flow_style=False))
+    with open(filename_without_ext + '.yaml', 'w') as outfile:
+        dump_str = yaml.safe_dump(
+            metadata,
+            outfile,
+            encoding='utf-8',
+            allow_unicode=True,
+            default_flow_style=False
+        )
 
 if __name__ == "__main__":
     main(sys.argv[1])
