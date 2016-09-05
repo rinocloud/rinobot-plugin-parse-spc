@@ -4,9 +4,9 @@
   "name": "rinobot-plugin-parse-spc",
   "description": "Parses .spc files",
   "version": "0.0.6",
-  "repository": "https://github.com/rinocloud/rinobot-plugin-parse-spc.git",
   "author": "eoin murray",
   "license": "MIT",
+  "repository": "https://github.com/rinocloud/rinobot-plugin-parse-spc.git",
   "keywords": [
     "rinobot",
     "rinocloud"
