@@ -3,7 +3,7 @@
   "engine": "python3",
   "name": "rinobot-plugin-parse-spc",
   "description": "Parses .spc files",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "author": "eoin murray",
   "license": "MIT",
   "repository": "https://github.com/rinocloud/rinobot-plugin-parse-spc.git",
