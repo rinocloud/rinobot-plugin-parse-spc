@@ -1,11 +1,5 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-Command line utility to convert .SPC files to .TXT
-
-author: Rohan Isaac
-"""
 from __future__ import division, absolute_import, unicode_literals, print_function
+import rinobot_plugin as bot
 import argparse
 import os
 import sys
@@ -14,9 +8,8 @@ import ast
 import yaml
 
 
-def main(filepath):
-    filename_without_ext = os.path.splitext(filepath)[0]
-    delim = '\t'
+def main():
+    filepath = bot.filepath()
     f = File(filepath)
 
     metadata = {
@@ -36,8 +29,11 @@ def main(filepath):
                 y = y.strip()
             metadata[x.strip()] = y
 
-    f.write_file(filename_without_ext + '.txt', delimiter=delim)
-    with open(filename_without_ext + '.yaml', 'w') as outfile:
+    outname = bot.no_extension() + '-spc-converted.txt'
+    outpath = bot.output_filepath(outname)
+
+    f.write_file(outpath, delimiter=',')
+    with open(outpath + '.yaml', 'w') as outfile:
         dump_str = yaml.safe_dump(
             metadata,
             outfile,
@@ -47,4 +43,4 @@ def main(filepath):
         )
 
 if __name__ == "__main__":
-    main(sys.argv[1])
+    main()

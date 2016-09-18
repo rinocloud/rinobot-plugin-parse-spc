@@ -6,6 +6,9 @@
   "version": "0.0.7",
   "author": "eoin murray",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "pip install rinobot-plugin --upgrade"
+  },
   "repository": "https://github.com/rinocloud/rinobot-plugin-parse-spc.git",
   "keywords": [
     "rinobot",

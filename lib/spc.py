@@ -387,8 +387,7 @@ class File:
             self.x = struct.unpack(('<' + dat_siz * 'd').encode('utf8'), raw_data[i:i + dat_len])
 
         else:
-            print("File type %s not supported yet. Please add issue. "
-                  % hex(ord(self.fversn)))
+            print("File type %s not supported yet. Please add issue. " % hex(ord(self.fversn)))
             self.content = content
 
     # ------------------------------------------------------------------------
